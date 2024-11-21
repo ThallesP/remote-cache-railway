@@ -22,7 +22,8 @@ After deploying, you'll need to configure your Turborepo project to use the new 
 
 ### 3. Update Turborepo Configuration 📝
 
-Now you can set the following environment variables in your Turborepo project when building:
+Time to modify your code to use the remote cache, but trust me, it's easy.  
+Set the following environment variables that you copied from the Railway project we just deployed:
 
 ```properties
 # When deploying your code on the same Railway project as this template, you can use ${{"Turborepo Remote Cache".TURBO_TOKEN}}
