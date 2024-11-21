@@ -73,6 +73,7 @@ Remote caching enabled
 ### Common Issues
 - Verify Railway deployment is running and accessible
 - Double-check that your token and API URL are correctly configured
+- Test the setup using the [example reference project](https://github.com/ThallesP/remote-cache-railway) to validate configuration and rule out any potential template-specific issues
 
 ### Need More Help?
 Join Railway's [Discord community](https://discord.gg/railway) for additional support and troubleshooting. 
