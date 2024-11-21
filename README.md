@@ -25,18 +25,19 @@ After deploying, you'll need to configure your Turborepo project to use the new 
 Now you can set the following environment variables in your Turborepo project when building:
 
 ```properties
-# When deploying your code on Railway, you can use ${{"Turborepo Remote Cache".TURBO_TOKEN}}
+# When deploying your code on the same Railway project as this template, you can use ${{"Turborepo Remote Cache".TURBO_TOKEN}}
 TURBO_TOKEN=
-# When deploying your code on Railway, you can use ${{"Turborepo Remote Cache".TURBO_PRIVATE_API_URL}}
+# When deploying your code on the same Railway project as this template, you can use ${{"Turborepo Remote Cache".TURBO_PRIVATE_API_URL}}
 TURBO_API_URL= 
 # Leave this as is
 TURBO_TEAM=railway-remote-cache
 ```
 
-And to load it from a `.env` file, you can use the `dotenv-cli` package:
+And in case you prefer `.env` file instead of filling out those env variables in your shell everytime, you can use the `dotenv-cli` package.
+Modify the `build` script in your `package.json` root to include the following:
 
 ```bash
-dotenv -e .env -- npx turbo build
+dotenv -e .env -- turbo build
 ```
 
 ### 4. Use Remote Cache 🎉
