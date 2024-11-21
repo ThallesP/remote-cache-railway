@@ -22,28 +22,14 @@ After deploying, you'll need to configure your Turborepo project to use the new 
 
 ### 3. Update Turborepo Configuration 📝
 
-Now it's time to modify our code, but trust me, it's easy.  
-Create or modify `.turbo/config.json` in your project root:
-
-```json
-{
- "teamSlug": "railway-remote-cache",
- "token": "<TURBO_TOKEN>",
- "experimentalUI": false,
- "apiUrl": "<TURBO_API_URL>"
-}
-```
-
-> ⚠️ **Security Warning**: Never commit the `config.json` file with your actual `TURBO_TOKEN` to version control. Add `.turbo/config.json` to your `.gitignore` file to prevent accidentally exposing sensitive credentials.
-
-<details>
-<summary>💡 <strong>Alternative:</strong> Using Environment Variables</summary>
-
-If you don't want to create the `config.json` file, you can set the following environment variables in your Turborepo project when building:
+Now you can set the following environment variables in your Turborepo project when building:
 
 ```properties
-TURBO_TOKEN=<TURBO_TOKEN>
-TURBO_API_URL=<TURBO_API_URL>
+# When deploying your code on Railway, you can use ${{"Turborepo Remote Cache".TURBO_TOKEN}}
+TURBO_TOKEN=
+# When deploying your code on Railway, you can use ${{"Turborepo Remote Cache".TURBO_PRIVATE_API_URL}}
+TURBO_API_URL= 
+# Leave this as is
 TURBO_TEAM=railway-remote-cache
 ```
 
@@ -52,8 +38,6 @@ And to load it from a `.env` file, you can use the `dotenv-cli` package:
 ```bash
 dotenv -e .env -- npx turbo build
 ```
-
-</details>
 
 ### 4. Use Remote Cache 🎉
 
