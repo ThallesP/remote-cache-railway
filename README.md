@@ -5,7 +5,7 @@ Deploy a secure, self-hosted Turborepo remote cache on Railway with just a few c
 ## Setup Guide 
 
 ### 1. Deploy to Railway with One Click 🎯  
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.app/template/tRFTHR?referralCode=chIZYq)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/tRFTHR?utm_medium=integration&utm_source=button&utm_campaign=tRFTHR)
 
 Simply click the Deploy on Railway button above to instantly set up your remote cache.
 
